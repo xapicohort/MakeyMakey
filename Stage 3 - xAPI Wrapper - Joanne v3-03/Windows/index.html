@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name='viewport' content='initial-scale = 1, minimum-scale = 1, maximum-scale = 1'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=10">
+<title>MakeyMakey - Windows Demo</title>
+<style type="text/css">#initialLoading{background:url(js/loader.gif) no-repeat center center;background-color:#ffffff;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0;z-index:10010;}</style>
+
+<script>
+
+var deviceReady = false;
+var initCalled = false ;
+var initialized = false;
+//********************
+//**  MakeyMakey  **
+//********************
+//insert this code to load all the appropriate packages
+var tincan,jq,cpm;
+if(navigator.appName  !== "Microsoft Internet Explorer"){
+	tincan = "assets/js/tincan.js"
+	// cpm ="assets/js/CPM.js";
+	//jq='assets/js/jquery-1.11.3.min.js';
+	// jq='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'
+}else{
+	tincan = "assets/js/tincan.js"
+	cpm = null; //cause IE not to load
+}
+//end of inserted code
+//********************
+//**  MakeyMakey  **
+//********************
+
+function onBodyLoad()
+{
+	if(typeof window.device === 'undefined')
+	{
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	else
+	{
+		onDeviceReady();
+	}
+}
+
+function onDeviceReady()
+{
+	deviceReady = true ;
+	if(initCalled === true)
+		initializeCP();
+}
+
+
+
+</script>
+
+ </head>
+<body onload="onBodyLoad()">
+		<div id='initialLoading'>Loading...</p>
+		<a href="http://duckworks.biz/duckworks/xAPI/MakeyMakey/downloads/Stage%203%20-%20xAPI%20Wrapper%20-%20Joanne%20v3-03/Windows/index.html"/>Windows Demo</a></div>
+<script>
+		(function()
+		{
+			if(document.documentMode < 9)
+			{
+				document.body.innerHTML = "";
+				document.write("The content you are trying to view is not supported in the current Document Mode of Internet Explorer. Change the Document Mode to Internet Explorer 9 Standards and try to view the content again.<br>To change the Document Mode, press F12, click Document Mode: <current mode>, and then select Internet Explorer 9 Standards.");
+				return;
+			}
+			window.addEventListener("load",function()
+			{
+				setTimeout(function()
+				{
+					var script = document.createElement('script');
+					script.type = 'text/javascript';
+					// script.src = 'assets/js/CPXHRLoader.js';
+					script.defer = 'defer';
+					script.onload = function()
+					{
+						var lCSSLoaded = false;
+						var lJSLoaded = false;
+						function constructDIVs()
+						{
+							if(lCSSLoaded && lJSLoaded)
+							{
+								initializeCP();
+							}
+						}
+						 cpXHRJSLoader.css('assets/css/CPLibraryAll.css',function() {
+						 	lCSSLoaded = true;
+							constructDIVs();
+						});
+									//********************
+						//**  MakeyMakey  **
+						//********************
+						//	var lJSFiles = [  'assets/js/jquery-1.11.3.min.js','assets/js/CPM.js' ];
+						var lJSFiles = [  jq,tincan ];
+						//this is loading all the variables we set up top
+						//********************
+						//**  MakeyMakey  **
+						//********************
+
+
+
+
+						cpXHRJSLoader.js(lJSFiles,function()
+						{
+							//console.log("js loaded");
+
+							var imagesJSONFiles = [ 'dr/imgmd.json' ];
+							cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
+								cp.imageToJSONPathMap = imageToJSONPathMap;
+								var imageJSONFiles = [ 'dr/img1.json' ];
+								if(window.location.protocol.substr(0,4) == "file")
+									cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
+								lJSLoaded = true;
+								if(window.location.protocol.substr(0,4) != "file" || !imageJSONFiles.length)
+									constructDIVs();
+							});
+						});
+					}
+					document.getElementsByTagName('head')[0].appendChild(script);
+				},1);
+			},false);
+		})();
+
+</script>
+<noscript style="text-align:center;font-size:24px;">Enable Javascript support in the browser.</noscript>
+</body>
+</html>
