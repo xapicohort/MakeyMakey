@@ -5,6 +5,6 @@ This updated application pulls HTML, CSS, JavaScript libraries from DuckWorks.bi
 
 [Download Windows here](http://duckworks.biz/duckworks/xAPI/downloads/Bduck/Windows/Windows.zip)
 
-[Download Mac here](http://duckworks.biz/duckworks/xAPI/downloads/BDuck/MacOSX/xAPI%20Wrapper%20-%20BDuck.app)
+[Download Mac here](http://duckworks.biz/duckworks/xAPI/downloads/Bduck/MacOSX/xAPI%20Wrapper%20-%20BDuck.app)
 
-[Download Linux here](http://duckworks.biz/duckworks/xAPI/downloads/BDuck/Linux/Linux.zip)
+[Download Linux here](http://duckworks.biz/duckworks/xAPI/downloads/Bduck/Linux/Linux.zip)
