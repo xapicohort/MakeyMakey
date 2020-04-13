@@ -5,6 +5,6 @@ This updated application pulls HTML, CSS, JavaScript libraries from DuckWorks.bi
 
 [Download Windows here](http://duckworks.biz/duckworks/xAPI/downloads/Doug/v4-19/Windows/Windows.zip)
 
-[Download Mac here](http://duckworks.biz/duckworks/xAPI/downloads/Doug/v4-19/MacOSX/xAPIWrapperMac.zip)
+[Download Mac here](http://duckworks.biz/duckworks/xAPI/downloads/Doug/v4-19/MacOSX/xAPI%20Cohort%20MakeyMakey%20LRP%20-%20JSON%20v4-19.app.zip)
 
 [Download Linux here](http://duckworks.biz/duckworks/xAPI/downloads/Doug/v4-19/Linux/Linux.zip)
