@@ -1,8 +1,10 @@
 # Stage 1: MakeyMakey Setup and Testing App
-Build a cross platform app for setup and testing of the Makey Makey
-Initial build is desktop only (MakeyMakey is USB device): Mac/Win/Linux
+Our goal is to build a cross platform app for setup and testing of the Makey Makey
+The initial build is desktop only (MakeyMakey is USB device): Mac/Win/Linux
 Request team & other cohort members to test the desktop and provide feedback 
 	 in the #Team-MakeyMakey slack channel
+
+There is a video demo of the app on [YouTube](https://www.youtube.com/watch?v=DJedJ5IjPsw):https://www.youtube.com/watch?v=DJedJ5IjPsw
 
 KNOWN ISSUE: One of the default 'keys' the Makey Makey uses is a 'click.'
 
